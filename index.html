@@ -55,13 +55,31 @@
             </div>
         </div>
         <div class="pages">
-            <div class="homepage">
-                <a href="https://www.smu.ac.kr/" target="_blank">홈페이지</a>
+            <div OnClick="location.href ='https://www.smu.ac.kr/'" style="cursor:pointer;" class="homepage">
+                <h3>학교 홈페이지</h3>
+                <p>상명대학교 공식 홈페이지 바로가기</p>
             </div>
-            <div class="dev_info">
-                <a href="https://www.github.com/yesa0513/SMUd" target="_blank">프로젝트 정보</a>
+            <div OnClick="location.href ='https://www.github.com/yesa0513/SMU_d'" style="cursor:pointer;" class="dev_info">
+                <h3>프로젝트 정보</h3>
+                <p>이 프로젝트는 한국에서부터 최초로 시작되어...</p>
             </div>
         </div>                        
+    </div>
+    <div class="menu_bar">
+        <div class="date-selector">
+            <span id="current_date"></span>
+            <select id="day_select" onchange="handleDayChange(event)">
+                <option value="1">월요일</option>
+                <option value="2">화요일</option>
+                <option value="3">수요일</option>
+                <option value="4">목요일</option>
+                <option value="5">금요일</option>
+            </select>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 SMU_d</p>
+        <p>Contact - hi@noa.kim</p>
     </div>
 </body>
 </html>

@@ -1,5 +1,25 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy-5Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 
 head {
     padding: 0;
@@ -7,22 +27,29 @@ head {
 }
 
 body {
-    font-family: Pretendard;
+    font-family: Paperlogy-5Medium;
     padding: 0;
     margin: 0;
-    background-color: #e3e3e3;
+    background-color: #ececec;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
-    font-family: Pretendard;
+h2 {
+    font-family: Paperlogy-5Medium;
+    margin: 0;
+    padding: 0;
+}
+
+h3, h4, h5, h6, p {
+    font-family: Paperlogy-3Light;
+    text-decoration: none;
     margin: 0;
     padding: 0;
 }
 
 .header {
-    background-color: #9ca7ef;
+    font-family: Paperlogy-8ExtraBold;
+    background-color: #c3caf5;
     border-radius: 0px 0px 15px 15px;
-    margin: 1rem;
     margin-top: 0;
     padding: 15px;
 }
@@ -38,15 +65,15 @@ h1, h2, h3, h4, h5, h6, p, a {
 /* Menu */
 
 .food h2 {
-    color: #1d2656;
-    font-size: 1.3rem;
+    color: #455ad1;
+    font-size: 1.1rem;
     font-weight: 300;
 }
 
 .seoul, .cheonan {
     margin: 1rem;
     padding: 0;
-    background-color: #cfcfcf;
+    background-color: #e4e4e4;
     border-radius: 20px;
 }
 
@@ -58,39 +85,37 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .s_contents p {
     color: #4c5063;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 0.3rem;
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     font-weight: 200;
 }
 
 #seoul_select, #cheonan_student_select {
-    background-color: #cfcfcf;
+    font-family: Paperlogy-5Medium;
+    background-color: #e4e4e4;
     font-size: 1rem;
     color: #1d2656;
     border: none;
 }
 
 #restaurant_select {
-    font-size: 1rem;
+    font-family: Paperlogy-3Light;
+    font-size: 0.9rem;
     color: #4c5063;
     border: none;
-    background-color: #cfcfcf;
+    background-color: #e4e4e4;
     padding: 0;
+    margin: 0;
     margin-top: 0.3rem;
+    margin-left: 0.2rem;
     font-weight: 300;
 }
 
-.place {
-    margin-left: 0.3rem;
-}
-
 .menu {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
 }
-
-
 
 .header-container {
     display: flex;
@@ -111,6 +136,138 @@ h1, h2, h3, h4, h5, h6, p, a {
     margin: 0.3rem;
 }
 
+.pages {
+    padding: 0;
+    margin: 0;
+    margin-top: 4rem;
+}
+
+.homepage {
+    background-color: #d1d6e7;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 1rem;
+    color: #1d2656;
+    font-size: 0.9rem;
+}
+
+.dev_info {
+    background-color: #dbd4e6;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 1rem;
+    color: #1d2656;
+    font-size: 0.9rem;
+}
+
+.homepage p, .dev_info p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: #4c5063;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.menu_bar {
+    font-family: Paperlogy-5Medium;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #c3caf5;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.date-selector {
+    padding: 15px;
+}
+
+#current_date {
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: #1d2656;
+}
+
+#day_select {
+    font-family: Paperlogy-8ExtraBold;
+    font-size: 1.1rem;
+    color: #1d2656;
+    font-weight: 900;
+    background-color: #c3caf5;
+    border: none;
+}
+
+.footer {
+    font-family: Paperlogy-3Light;
+    font-size: 0.8rem;
+    color: #a3a3a3;
+    padding: 0;
+    margin: 0;
+    margin-top: 6rem;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0.2rem;
+}
+
 .hidden {
     display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #171921;
+    }
+
+    .header h1, #current_date, #day_select {
+        color: #90a4ff;
+    }
+
+    .header, .menu_bar, #day_select {
+        background-color: #2e3870;
+    }
+
+    .seoul, .cheonan {
+        background-color: #2a2c36;
+    }
+
+    #seoul_select, #cheonan_student_select {
+        background-color: #2a2c36;
+        color: #b7bee0;
+    }
+
+    #restaurant_select {
+        background-color: #2a2c36;
+        color: #8287a1;
+    }
+
+    .menu {
+        color: #c7c7c7;
+    }
+
+    .food h2 {
+        color: #aeb5d7;
+    }
+
+    .s_contents p {
+        color: #8287a1;
+    }
+    
+    .pages p {
+        color: #8287a1;
+    }
+
+    .homepage {
+        background-color: #272d41;
+        color: #b8c4e9;
+    }
+
+    .dev_info {
+        background-color: #322238;
+        color: #d9b5e7;
+    }
 }
