@@ -3,7 +3,7 @@
     "short_name": "스무디",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#90a4ff",
+    "background_color": "#c3caf5",
     "theme_color": "#90a4ff",
     "description": "Browse SMU_d menu and place orders online",
     "icons": [
