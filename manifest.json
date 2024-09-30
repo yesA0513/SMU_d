@@ -1,11 +1,11 @@
 {
-    "name": "SMU Cafeteria",
-    "short_name": "Cafeteria",
+    "name": "SMU_d 스무디",
+    "short_name": "스무디",
     "start_url": "/",
     "display": "standalone",
     "background_color": "##0e207f",
     "theme_color": "#0e207f",
-    "description": "Browse SMU Restaurant's menu and place orders online",
+    "description": "Browse SMU_d menu and place orders online",
     "icons": [
       {
         "src": "icon.png",

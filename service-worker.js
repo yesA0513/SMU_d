@@ -1,6 +1,6 @@
 self.addEventListener('install', function(event) {
     event.waitUntil(
-      caches.open('smu-restaurant-cache').then(function(cache) {
+      caches.open('smu-d-cache').then(function(cache) {
         return cache.addAll([
           '/',
           '/index.html',
