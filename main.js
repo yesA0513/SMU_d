@@ -133,3 +133,23 @@ window.addEventListener('load', function() {
         document.getElementById('installguide').style.display = 'none';
     }
 });
+
+function updateThemeColor() {
+    const themeColorMeta = document.getElementById('theme-color-meta');
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (isDarkMode) {
+        themeColorMeta.setAttribute('content', '#2e3870'); // 다크 모드 theme color
+    } else {
+        themeColorMeta.setAttribute('content', '#c3caf5'); // 기본 theme color
+    }
+}
+
+// 초기 테마 설정
+updateThemeColor();
+
+// 다크 모드 변경 감지
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    updateThemeColor();
+});
+
