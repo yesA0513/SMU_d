@@ -1,11 +1,11 @@
 self.addEventListener('install', function(event) {
     event.waitUntil(
-      caches.open('smu-restaurant-cache').then(function(cache) {
+      caches.open('smu-d-cache').then(function(cache) {
         return cache.addAll([
           '/',
           '/index.html',
           '/css/styles.css',
-          '/js/app.js',
+          '/js/main.js',
           '/images/icons/icon-192x192.png',
           '/images/icons/icon-512x512.png'
         ]);
