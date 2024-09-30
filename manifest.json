@@ -4,7 +4,7 @@
     "start_url": "/",
     "display": "standalone",
     "background_color": "#90a4ff",
-    "theme_color": "#0e207f",
+    "theme_color": "##90a4ff",
     "description": "Browse SMU_d menu and place orders online",
     "icons": [
       {
