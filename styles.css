@@ -97,6 +97,7 @@ h3, h4, h5, h6, p {
     font-size: 1rem;
     color: #1d2656;
     border: none;
+    text-align: right;
 }
 
 #restaurant_select {
