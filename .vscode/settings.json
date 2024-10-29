@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "Consolas, 'Courier New', 'Pretendard Regular', monospace"
+    "editor.fontFamily": "Consolas, 'Courier New', 'Pretendard Regular', monospace",
+    "liveServer.settings.port": 5501
 }

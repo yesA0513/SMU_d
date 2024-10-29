@@ -17,6 +17,8 @@ function initializeMenus() {
     showMenu('cheonan', 'student_' + currentMeal);
     
     document.getElementById('seoul_select').value = currentMeal;
+
+    
     document.getElementById('cheonan_student_select').value = 'student_' + currentMeal;
     document.getElementById('restaurant_select').value = 'student';
     
@@ -52,8 +54,12 @@ function showMenu(campus, type) {
         } else {
             menuItems = menuData?.[campus]?.[type]?.[selectedDayIndex - 1] || [];
         }
-    } else {
-        menuItems = menuData?.[campus]?.[type]?.[selectedDayIndex - 1] || [];
+    } else if (campus === 'seoul') {
+        if (type === 'food_court1' || type === 'food_court2') {
+            menuItems = menuData?.[campus]?.[type] || [];
+        } else {
+            menuItems = menuData?.[campus]?.[type]?.[selectedDayIndex - 1] || [];
+        }
     }
 
     const menuElement = campus === 'seoul' 
@@ -61,8 +67,6 @@ function showMenu(campus, type) {
         : document.getElementById('cheonan_student_dropdown').querySelector('ul');
     
     menuElement.innerHTML = '';
-
-
 
     menuItems.forEach(item => {
         const li = document.createElement('li');
