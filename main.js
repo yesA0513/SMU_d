@@ -47,16 +47,17 @@ function getCurrentMeal() {
 function showMenu(campus, type) {
     let menuItems = [];
     
-    if (campus === 'cheonan') {
+    if (campus === 'seoul') {
+        if (type === 'food_court1' || type === 'food_court2') {
+            // food_court 메뉴는 selectedDayIndex - 1 번째 배열의 모든 항목을 표시
+            menuItems = menuData?.seoul?.[type]?.[selectedDayIndex - 1] || [];
+        } else {
+            menuItems = menuData?.seoul?.[type]?.[selectedDayIndex - 1] || [];
+        }
+    } else if (campus === 'cheonan') {
         if (type.startsWith('student_')) {
             const mealType = type.split('_')[1];
             menuItems = menuData?.[campus]?.student?.[mealType]?.[selectedDayIndex - 1] || [];
-        } else {
-            menuItems = menuData?.[campus]?.[type]?.[selectedDayIndex - 1] || [];
-        }
-    } else if (campus === 'seoul') {
-        if (type === 'food_court1' || type === 'food_court2') {
-            menuItems = menuData?.[campus]?.[type] || [];
         } else {
             menuItems = menuData?.[campus]?.[type]?.[selectedDayIndex - 1] || [];
         }
@@ -68,11 +69,13 @@ function showMenu(campus, type) {
     
     menuElement.innerHTML = '';
 
-    menuItems.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        menuElement.appendChild(li);
-    });
+    if (Array.isArray(menuItems)) {
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            menuElement.appendChild(li);
+        });
+    }
 }
 
 function handleSeoulDropdownChange(event) {
