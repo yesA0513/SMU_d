@@ -1,7 +1,9 @@
 let menuData;
 let selectedDayIndex = getCurrentDayIndex();
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    showAlert();
+    
     fetch('menu_info/menu.json')
         .then(response => response.json())
         .then(data => {
@@ -10,6 +12,28 @@ document.addEventListener('DOMContentLoaded', () => {
             updateDateDisplay();
         });
 });
+
+function showAlert() {
+    const alertModal = document.getElementById('alert-modal');
+    if (alertModal) {
+        alertModal.style.display = 'block';
+    }
+}
+
+function closeAlert() {
+    const alertModal = document.getElementById('alert-modal');
+    if (alertModal) {
+        alertModal.style.display = 'none';
+    }
+}
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    const alertContent = document.querySelector('.alert-content');
+    if (alertContent) {
+        alertContent.style.backgroundColor = '#2a2c36';
+        alertContent.style.color = '#c7c7c7';
+    }
+}
 
 function initializeMenus() {
     const currentMeal = getCurrentMeal();

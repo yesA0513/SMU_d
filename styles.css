@@ -273,3 +273,115 @@ h3, h4, h5, h6, p {
         color: #d9b5e7;
     }
 }
+
+.alert-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.alert-content {
+    background-color: #e4e4e4;
+    margin: 15% auto;
+    padding: 15px;
+    border: none;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+.alert-title {
+    text-align: left;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c3caf5;
+    color: #455ad1;
+    font-family: Paperlogy-5Medium;
+    font-size: 1.1rem;
+}
+
+.alert-body {
+    text-align: center;
+    font-family: Paperlogy-3Light;
+}
+
+.alert-body p {
+    margin-bottom: 12px;
+    color: #4c5063;
+    font-size: 0.9rem;
+    word-break: keep-all;
+    line-height: 1.4;
+}
+
+.alert-link {
+    display: inline-block;
+    background-color: #c3caf5;
+    color: #1d2656;
+    padding: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 15px 0;
+    font-family: Paperlogy-5Medium;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    word-break: keep-all;
+}
+
+.alert-link:hover {
+    background-color: #b3bcf0;
+}
+
+.alert-content button {
+    background-color: #c3caf5;
+    color: #1d2656;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: Paperlogy-5Medium;
+    font-size: 0.9rem;
+}
+
+.alert-content button:hover {
+    background-color: #b3bcf0;
+}
+
+/* 다크모드 대응 */
+@media (prefers-color-scheme: dark) {
+    .alert-content {
+        background-color: #2a2c36;
+    }
+    
+    .alert-title {
+        color: #aeb5d7;
+        border-bottom-color: #2e3870;
+    }
+    
+    .alert-body p {
+        color: #8287a1;
+    }
+    
+    .alert-link {
+        background-color: #2e3870;
+        color: #b7bee0;
+    }
+    
+    .alert-link:hover {
+        background-color: #3a4685;
+    }
+
+    .alert-content button {
+        background-color: #2e3870;
+        color: #b7bee0;
+    }
+
+    .alert-content button:hover {
+        background-color: #3a4685;
+    }
+}
